@@ -1,0 +1,84 @@
+<!-- Vertical Menu -->
+<ng-container *ngIf="menuType === 'vertical-menu'">
+  <vertical-menu></vertical-menu>
+</ng-container>
+<!--/ Vertical Menu -->
+
+<!-- Horizontal Menu -->
+<ng-container *ngIf="menuType === 'horizontal-menu'">
+  <horizontal-menu></horizontal-menu>
+  
+</ng-container>
+<!--/ Horizontal Menu -->
+
+<ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+  <!-- Tournois -->
+  <li class="nav-item">
+    <a routerLink="/tournois">
+      <i class="feather icon-award"></i>
+      <span class="menu-title">Tournois</span>
+    </a>
+  </li>
+
+  <!-- Équipes -->
+  <li class="nav-item">
+    <a routerLink="/teams">
+      <i class="feather icon-users"></i>
+      <span class="menu-title">Équipes</span>
+    </a>
+  </li>
+
+  <!-- Matchs (avec sous-menus) -->
+  <li class="nav-item has-sub">
+    <a href="#">
+      <i class="feather icon-calendar"></i>
+      <span class="menu-title">Matchs</span>
+    </a>
+    <ul class="menu-content">
+      <li><a routerLink="/matchs/en-cours"><span class="menu-item">En cours</span></a></li>
+      <li><a routerLink="/matchs/a-venir"><span class="menu-item">À venir</span></a></li>
+      <li><a routerLink="/matchs/termines"><span class="menu-item">Terminés</span></a></li>
+    </ul>
+  </li>
+
+  <!-- Utilisateurs -->
+  <li class="nav-item">
+    <a routerLink="/users">
+      <i class="feather icon-user"></i>
+      <span class="menu-title">Utilisateurs</span>
+    </a>
+  </li>
+
+  <!-- Gérants -->
+  <li class="nav-item">
+    <a routerLink="/gerants">
+      <i class="feather icon-briefcase"></i>
+      <span class="menu-title">Gérants</span>
+    </a>
+  </li>
+
+  <!-- Tickets -->
+  <li class="nav-item">
+    <a routerLink="/tickets">
+      <i class="feather icon-ticket"></i>
+      <span class="menu-title">Tickets</span>
+    </a>
+  </li>
+
+  <!-- Poules -->
+  <li class="nav-item">
+    <a routerLink="/poules">
+      <i class="feather icon-layers"></i>
+      <span class="menu-title">Poules</span>
+    </a>
+  </li>
+
+  <!-- Transactions -->
+  <li class="nav-item">
+    <a routerLink="/transactions">
+      <i class="feather icon-dollar-sign"></i>
+      <span class="menu-title">Transactions</span>
+    </a>
+  </li>
+</ul>
+
